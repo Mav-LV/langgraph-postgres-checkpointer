@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langgraph-checkpoint-postgres"
+version = "3.0.3"
+description = "Library with a Postgres implementation of LangGraph checkpoint saver."
+authors = []
+requires-python = ">=3.10"
+readme = "checkpoint-postgres/README.md"
+license = "MIT"
+dependencies = [
+  "langgraph-checkpoint>=2.1.2,<5.0.0",
+  "orjson>=3.10.1",
+  "psycopg>=3.2.0",
+  "psycopg-pool>=3.2.0",
+]
+
+[project.urls]
+Source = "https://github.com/Mav-LV/langgraph-postgres-checkpointer"
+
+[tool.hatch.build.targets.wheel]
+packages = ["checkpoint-postgres/langgraph"]
